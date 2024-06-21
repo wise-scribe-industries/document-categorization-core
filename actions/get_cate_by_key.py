@@ -1,6 +1,6 @@
 import logging
-from cate_keys import cate_keys
-from read_doc_txt import read_doc_txt
+from .cate_keys import cate_keys
+from .read_doc_txt import read_doc_txt
 
 # Configure logging>
 logging.basicConfig(level=logging.ERROR)
@@ -23,13 +23,13 @@ def get_cate_by_key(doc_text):
 
 if __name__ == "__main__":
     # Example usage
-    demo_legal_path = "./demo_files/Legal.docx"
+    demo_legal_path = "../demo_files/Legal.docx"
     content = read_doc_txt(demo_legal_path)
     result = get_cate_by_key(content)
     print("This Demo result of get_cate_by_key function for legal documents :")
     print("This is a " + result + " document.")
 
-    demo_will_path = "./demo_files/Demo_Wills.txt"
+    demo_will_path = "../demo_files/Demo_Wills.txt"
     content = read_doc_txt(demo_will_path)
     result = get_cate_by_key(content)
     print("This is a " + result + " document.")

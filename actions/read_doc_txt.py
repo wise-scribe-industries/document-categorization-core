@@ -42,7 +42,7 @@ def read_doc_txt(file_path):
 
 if __name__ == "__main__":
     # example test
-    path = './demo_files/Legal.docx'
+    path = '../demo_files/Legal.docx'
     content = read_doc_txt(path)
     print(content)
 
